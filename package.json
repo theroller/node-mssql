@@ -41,6 +41,7 @@
 		"node": ">=0.10"
 	},
 	"scripts": {
+		"preinstall": "npm run compile",
 		"prepublish": "node_modules/.bin/coffee --compile --output ./lib ./src",
 		"compile": "node_modules/.bin/coffee --compile --output ./lib ./src",
 		"test": "node_modules/.bin/mocha test/unit",
