@@ -29,12 +29,12 @@
 	},
 	"license": "MIT",
 	"dependencies": {
+		"coffee-script": "^1.9.3",
 		"tedious": "~1.14.0",
 		"generic-pool": "^2.2.0",
 		"promise": "^7.0.1"
 	},
 	"devDependencies": {
-		"coffee-script": "^1.9.3",
 		"mocha": "^2.1.0"
 	},
 	"engines": {
@@ -42,7 +42,7 @@
 	},
 	"scripts": {
 		"preinstall": "npm run compile",
-		"prepublish": "node_modules/.bin/coffee --compile --output ./lib ./src",
+		"prepublish": "npm run compile",
 		"compile": "node_modules/.bin/coffee --compile --output ./lib ./src",
 		"test": "node_modules/.bin/mocha test/unit",
 		"test-tedious": "node_modules/.bin/mocha test/integration -g tedious",
